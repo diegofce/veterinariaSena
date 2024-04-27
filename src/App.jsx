@@ -1,6 +1,7 @@
 //importamos lo necesario par el funcionamiento de la página
 import { Index } from './componentes';
 import { NavBar } from './componentes/navbar';
+import { Footer } from './componentes/footer';
 import './componentes/mis_estilos.css';
 import { RegistroMascota } from './componentes/registromascota';
 import { RegistroUsuarios } from './componentes/registrousuarios';
@@ -37,9 +38,7 @@ function App() {
         
       </Routes>
 
-      <footer>
-        Derechos reservados de Autor
-      </footer>     
+      <Footer />
     
     </BrowserRouter>
 

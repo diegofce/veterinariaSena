@@ -68,60 +68,60 @@ export const AlimentosParaMascotas = () => {
 
                             <div className="mostrador" id="mostrador">
 
-                            <div className="fila">
+                                <div className="fila">
 
-                                <div className="item">
+                                    <div className="item">
 
-                                    <div className="contenedor-foto">
+                                        <div className="contenedor-foto">
 
-                                        <img src={require("../img/comida_max sin fondo.png")} alt=""/>
-                                        <p className="descripcion-articulos">Max Performance Perros adultos Pollo y Arroz 20 Kg + 2 Kg</p>
-                                        <span className="precio">$ 283.794</span>
+                                            <img src={require("../img/comida_max sin fondo.png")} alt=""/>
+                                            <p className="descripcion-articulos">Max Performance Perros adultos Pollo y Arroz 20 Kg + 2 Kg</p>
+                                            <span className="precio">$ 283.794</span>
+
+                                        </div>
+                                    </div>
+                                    <div className="item">
+
+                                        <div className="contenedor-foto">
+                                            <img src={require("../img/comida_chunky sin fondo.png")} alt=""/>
+                                            <p className="descripcion-articulos">Chunky Perros Adultos Pollo 25 Kg</p>
+                                            <span className="precio">$ 167.147</span>
+                                        </div>
+
+                                    </div>
+                                    <div className="item">
+
+                                        <div className="contenedor-foto">
+                                            <img src={require("../img/comida_liver-care sin fondo.png")} alt=""/>
+                                            <p className="descripcion-articulos">Hills Prescription Diet Perros Liver Care l/d 17.6 Lb</p>
+                                            <span className="precio">$ 312.073</span>
+                                        </div>
+
+                                    </div>
+                                    <div className="item">
+
+                                        <div className="contenedor-foto">
+                                            <img src={require("../img/comida_hills sin fondo.png")} alt=""/>
+                                            <p className="descripcion-articulos">Hills Canine adult small bite 15 Lb</p>
+                                            <span className="precio">$ 283.794</span>
+                                        </div>
 
                                     </div>
                                 </div>
-                                <div className="item">
+                                <div className="fila">
 
-                                    <div className="contenedor-foto">
-                                        <img src={require("../img/comida_chunky sin fondo.png")} alt=""/>
-                                        <p className="descripcion-articulos">Chunky Perros Adultos Pollo 25 Kg</p>
-                                        <span className="precio">$ 167.147</span>
+                                    <div className="item">
+
+                                        <div className="contenedor-foto">
+
+                                            <img src={require("../img/comida_weight_loss sin fondo.png")} alt=""/>
+                                            <p className="descripcion-articulos">Hills Prescription Diet Perros Weight Reduction r/d 27.5 Lb</p>
+                                            <span className="precio">$ 438.325</span>
+                                            
+                                        </div>
+
                                     </div>
-
                                 </div>
-                                <div className="item">
-
-                                    <div className="contenedor-foto">
-                                        <img src={require("../img/comida_liver-care sin fondo.png")} alt=""/>
-                                        <p className="descripcion-articulos">Hills Prescription Diet Perros Liver Care l/d 17.6 Lb</p>
-                                        <span className="precio">$ 312.073</span>
-                                    </div>
-
-                                </div>
-                                <div className="item">
-
-                                    <div className="contenedor-foto">
-                                        <img src={require("../img/comida_hills sin fondo.png")} alt=""/>
-                                        <p className="descripcion-articulos">Hills Canine adult small bite 15 Lb</p>
-                                        <span className="precio">$ 283.794</span>
-                                    </div>
-
-                                </div>
-                            </div>
-                            <div className="fila">
-
-                                <div className="item">
-
-                                    <div className="contenedor-foto">
-
-                                        <img src={require("../img/comida_weight_loss sin fondo.png")} alt=""/>
-                                        <p className="descripcion-articulos">Hills Prescription Diet Perros Weight Reduction r/d 27.5 Lb</p>
-                                        <span className="precio">$ 438.325</span>
-                                        
-                                    </div>
-
-                                </div>
-                            </div>
                             </div>
                         </fieldset>
                     
@@ -140,7 +140,7 @@ export const AlimentosParaMascotas = () => {
                     </form>
                 </div>
                 
-            /</div>
+            </div>
 
         </div>
 
