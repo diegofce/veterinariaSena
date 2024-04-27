@@ -1,8 +1,12 @@
 import React from 'react'
+import ReactDOM from 'react-dom/client'
 import "./mis_estilos.css";
 import googleIcon from "../img/google-mas.png";
 import facebookIcon from "../img/facebook.png";
 import { Link } from 'react-router-dom';
+
+const root = ReactDOM.createRoot(document.getElementById('root'))
+root.render()
 
 
 export const Index = () => {
