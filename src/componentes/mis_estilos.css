@@ -9,16 +9,12 @@
 
 /*para el body y cargando la imagen*/
 .body {
-  min-height: 100vh;
-  background-image: linear-gradient(
-      rgba(255, 255, 243, 0.65),
-      rgba(255, 255, 243, 0.65)
-    ),
+  min-height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 243, 0.65)),
     url("../img/logo veterinaria con nombre.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
-  background-size: contain;
 }
 
 .encabezado {
@@ -367,7 +363,7 @@ a:link {
   text-decoration: none;
   font-size: 24px;
   padding: 5px;
-  margin: 20px 10px;
+  margin: 5px;
 }
 /*para el manejo de los link*/
 a:hover {
@@ -449,7 +445,7 @@ a:visited {
 }
 
 .footer-links {
-  padding: 0 5px;
+  padding: 0 2px;
 }
 
 .footer-links ul li {
@@ -481,11 +477,9 @@ a:visited {
 }
 .social-links a {
   display: inline-block;
-  min-height: 20px;
   width: 40px;
-  margin: 0 10px 10px 0;
+  margin: 0 5px 5px 0;
   text-align: center;
-  line-height: 20px;
   color: #573529;
   transition: all 0.5s ease;
 }

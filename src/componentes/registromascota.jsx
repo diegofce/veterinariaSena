@@ -36,15 +36,15 @@ export const RegistroMascota = () => {
 
                         <h1 className="titulo">Registro de Mascotas</h1>
 
-                        <label className="label" for="nombre mascota">Nombre Mascota:</label>
+                        <label className="label" htmlFor="nombre mascota">Nombre Mascota:</label>
                         <br />
                         <input className="input" type="text" id="nombre mascota" placeholder="Ingresa el Nombre de la Mascota" {...register("nombre mascota")}/>
                         <br />
-                        <label className="label" for="raza">Raza:</label>
+                        <label className="label" htmlFor="raza">Raza:</label>
                         <br />
                         <input className="input" type="text" id="raza" placeholder="Ingresa la raza de la Mascota" {...register("raza")}/>
                         <br />
-                        <label className="label" for="especie">Especie:</label>
+                        <label className="label" htmlFor="especie">Especie:</label>
                         <br />
                         <select className="input" name="Especie" id="especie" {...register("specie")}>
 
@@ -59,8 +59,8 @@ export const RegistroMascota = () => {
 
                         <div class="bienvenida-1">
 
-                            <label className="label" for="edad">Edad Mascota:</label>
-                            <label className="label-2" for="peso">Peso Mascota:</label>
+                            <label className="label" htmlFor="edad">Edad Mascota:</label>
+                            <label className="label-2" htmlFor="peso">Peso Mascota:</label>
 
                             <div>
 
@@ -79,8 +79,8 @@ export const RegistroMascota = () => {
 
                         <div className="bienvenida-1">
 
-                            <label className="label" for="vacunas">Vacunas:</label>
-                            <label className="label-2" for="cant-vacunas">Cantidad Vacunas:</label>
+                            <label className="label" htmlFor="vacunas">Vacunas:</label>
+                            <label className="label-2" htmlFor="cant-vacunas">Cantidad Vacunas:</label>
 
                             <input className="checkbox" type="checkbox" name="vacuna1" id="checkbox1" {...register("vacuna1")}/>
                             <label className="label-check" htmlFor="checkbox1">Rabia</label>
@@ -96,7 +96,7 @@ export const RegistroMascota = () => {
                             </select>
 
                             <input className="checkbox" type="checkbox" name="checkbox" id="checkbox2" {...register("vacuna2")}/>
-                            <label className="label-check" for="checkbox2">Parvovirosis</label>
+                            <label className="label-check" htmlFor="checkbox2">Parvovirosis</label>
 
                             <select className="input-2" name="Cantidad Vacunas" id="checkbox2" {...register("cantidad2")}>
 
@@ -110,15 +110,15 @@ export const RegistroMascota = () => {
 
                         </div>
 
-                        <label className="label" for="ident-propietario">Identificacón Propietario:</label>
+                        <label className="label" htmlFor="ident-propietario">Identificacón Propietario:</label>
                         <br />
                         <input className="input" type="number" id="ident-propietario" placeholder="Ingresa tú Identificación" {...register("identificacion")}/>
                         <br />
-                        <label className="label" for="nom-propietario">Nombre Propietario:</label>
+                        <label className="label" htmlFor="nom-propietario">Nombre Propietario:</label>
                         <br />
                         <input className="input" type="text" id="nom-propietario" placeholder="Ingresa tú Nombre" {...register("nombrepropietario")}/>
                         <br />
-                        <label className="label" for="telefono">Telefono:</label>
+                        <label className="label" htmlFor="telefono">Telefono:</label>
                         <br />
                         <input className="input" type="phone" id="telefono" placeholder="Ingresa tú Número de Teléfono" {...register("telefono")}/>
                         <br />
@@ -139,8 +139,6 @@ export const RegistroMascota = () => {
                     </div>
 
                 </div>
-
-                
 
             </div>
 

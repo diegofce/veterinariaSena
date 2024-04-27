@@ -12,7 +12,7 @@ export const MedicamentosParaMascotas = () => {
                 <div className="menu">
 
                     <div>
-                        <label className="label" for="">Filtros</label>
+                        <label className="label">Filtros</label>
 
                         <details>
 
@@ -21,11 +21,11 @@ export const MedicamentosParaMascotas = () => {
                             <nav className="menus">
                                 <ul className="ul-menu1" id="categorias">
 
-                                    <li><input type="checkbox" id="antipulgas"/><label className="label-check1" for="antipulgas">Antipulgas</label></li>
-                                    <li><input type="checkbox" id="antiparasitarios"/><label className="label-check1" for="antiparasitarios">Antiparasitarios</label></li>
-                                    <li><input type="checkbox" id="vitaminas"/><label className="label-check1" for="vitaminas">Vitaminas</label></li>
-                                    <li><input type="checkbox" id="suplementos"/><label className="label-check1" for="suplementos">Suplementos</label></li>
-                                    <li><input type="checkbox" id="medicamentos"/><label className="label-check1" for="medicamentos">Medicamentos</label></li>
+                                    <li><input type="checkbox" id="antipulgas"/><label className="label-check1" htmlFor="antipulgas">Antipulgas</label></li>
+                                    <li><input type="checkbox" id="antiparasitarios"/><label className="label-check1" htmlFor="antiparasitarios">Antiparasitarios</label></li>
+                                    <li><input type="checkbox" id="vitaminas"/><label className="label-check1" htmlFor="vitaminas">Vitaminas</label></li>
+                                    <li><input type="checkbox" id="suplementos"/><label className="label-check1" htmlFor="suplementos">Suplementos</label></li>
+                                    <li><input type="checkbox" id="medicamentos"/><label className="label-check1" htmlFor="medicamentos">Medicamentos</label></li>
 
                                 </ul>
 
@@ -41,10 +41,10 @@ export const MedicamentosParaMascotas = () => {
 
                                 <ul className="ul-menu1" id="categorias">
 
-                                    <li><input type="checkbox" id="hills"/><label className="label-check1" for="hills">Hills</label></li>
-                                    <li><input type="checkbox" id="bayer"/><label className="label-check1" for="bayer">Bayer</label></li>
-                                    <li><input type="checkbox" id="bistop"/><label className="label-check1" for="bistop">Bistop</label></li>
-                                    <li><input type="checkbox" id="baytril"/><label className="label-check1" for="baytril">Baytril</label></li>
+                                    <li><input type="checkbox" id="hills"/><label className="label-check1" htmlFor="hills">Hills</label></li>
+                                    <li><input type="checkbox" id="bayer"/><label className="label-check1" htmlFor="bayer">Bayer</label></li>
+                                    <li><input type="checkbox" id="bistop"/><label className="label-check1" htmlFor="bistop">Bistop</label></li>
+                                    <li><input type="checkbox" id="baytril"/><label className="label-check1" htmlFor="baytril">Baytril</label></li>
 
                                 </ul>
 
@@ -60,7 +60,7 @@ export const MedicamentosParaMascotas = () => {
                         
                         <h1 className="titulo">Medicamentos Para Mascotas</h1>
 
-                        <label for="tipo-mascota" className="label">Selecciona el tipo de mascota: </label>
+                        <label className="label">Selecciona el tipo de mascota: </label>
                         <br />
 
                         <select className="input" name="tipo-mascota" id="tipo-mascota">
@@ -70,15 +70,15 @@ export const MedicamentosParaMascotas = () => {
 
                         </select>
                         <br />
-                        <label for="identificacion" className="label">Identificación del Solicitante: </label>
+                        <label htmlFor="identificacion" className="label">Identificación del Solicitante: </label>
                         <br />
                         <input type="number" className="input" id="identificacion" placeholder="Ingresa tú Número de Identificación"/>
                         <br />
-                        <label for="nombre" className="label">Solicitante del Servicio: </label>
+                        <label htmlFor="nombre" className="label">Solicitante del Servicio: </label>
                         <br />
                         <input type="text" className="input" id="nombre" placeholder="Se Muestra tú Nombre"/>
                         <br /><br />
-                        <label for="porductos" className="label">Listado de Alimentos Según Mascota: </label>
+                        <label className="label">Listado de Alimentos Según Mascota: </label>
                         <br />
                         <fieldset className="productos" id="productos">
 

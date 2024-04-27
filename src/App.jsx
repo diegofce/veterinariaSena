@@ -22,7 +22,6 @@ function App() {
       
       {/*para que el menú este en todas las páginas*/}
       <NavBar />
-
       {/*creamos las rutas para la navegación entre páginas*/}
       <Routes>
 
@@ -34,10 +33,9 @@ function App() {
         <Route path='/alimentosmascotas' element = { <AlimentosParaMascotas /> } />
         <Route path='/accesoriosmascotas' element = { <AccesoriosParaMascotas /> } />
         <Route path='/medicamentosmascotas' element = { <MedicamentosParaMascotas /> } />index
-        
-        
-      </Routes>
 
+      </Routes>
+      {/* para que el footer este en todas las paginas */}
       <Footer />
     
     </BrowserRouter>

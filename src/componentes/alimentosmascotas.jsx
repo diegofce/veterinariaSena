@@ -13,18 +13,18 @@ export const AlimentosParaMascotas = () => {
 
                 <div className="menu">
 
-                    <label className="label" for="">Filtros</label>
+                    <label className="label">Filtros</label>
 
                     <details>
                         <summary className="opciones-menu">Categorías</summary>
                         <nav className="menus">
                             <ul className="ul-menu1">
-                            <li><input type="checkbox" id="concentrados"/><label className="label-check1" for="concentrados">Concentrados</label></li>
-                            <li><input type="checkbox" id="trozos_humedos"/><label className="label-check1" for="trozos_humedos">Trozos Húmedos</label></li>
-                            <li><input type="checkbox" id="snacks"/><label className="label-check1" for="snacks">Snacks</label></li>
-                            <li><input type="checkbox" id="huesos"/><label className="label-check1" for="huesos">Huesos</label></li>
-                            <li><input type="checkbox" id="galletas"/><label className="label-check1" for="galletas">Galletas</label></li>
-                            <li><input type="checkbox" id="otros_alimentos"/><label className="label-check1" for="otros_alimentos">Otros alimentos</label></li>
+                            <li><input type="checkbox" id="concentrados"/><label className="label-check1" htmlFor="concentrados">Concentrados</label></li>
+                            <li><input type="checkbox" id="trozos_humedos"/><label className="label-check1" htmlFor="trozos_humedos">Trozos Húmedos</label></li>
+                            <li><input type="checkbox" id="snacks"/><label className="label-check1" htmlFor="snacks">Snacks</label></li>
+                            <li><input type="checkbox" id="huesos"/><label className="label-check1" htmlFor="huesos">Huesos</label></li>
+                            <li><input type="checkbox" id="galletas"/><label className="label-check1" htmlFor="galletas">Galletas</label></li>
+                            <li><input type="checkbox" id="otros_alimentos"/><label className="label-check1" htmlFor="otros_alimentos">Otros alimentos</label></li>
                             </ul>
                         </nav>
                     </details>
@@ -32,10 +32,10 @@ export const AlimentosParaMascotas = () => {
                         <summary className="opciones-menu">Marca</summary>
                         <nav>
                             <ul className="ul-menu1">
-                            <li><input type="checkbox" id="comida_max"/><label className="label-check1" for="comida_max">Comida Max</label></li>
-                            <li><input type="checkbox" id="comida_liver-care"/><label className="label-check1" for="comida_liver-care">Comida Liver Care</label></li>
-                            <li><input type="checkbox" id="comida_hills"/><label className="label-check1" for="comida_hills">Comida Hills</label></li>
-                            <li><input type="checkbox" id="comida_chunky"/><label className="label-check1" for="comida_chunky">Comida Chunky</label></li>
+                            <li><input type="checkbox" id="comida_max"/><label className="label-check1" htmlFor="comida_max">Comida Max</label></li>
+                            <li><input type="checkbox" id="comida_liver-care"/><label className="label-check1"htmlFor="comida_liver-care">Comida Liver Care</label></li>
+                            <li><input type="checkbox" id="comida_hills"/><label className="label-check1" htmlFor="comida_hills">Comida Hills</label></li>
+                            <li><input type="checkbox" id="comida_chunky"/><label className="label-check1" htmlFor="comida_chunky">Comida Chunky</label></li>
                             </ul>
                         </nav>
                     </details>
@@ -47,22 +47,22 @@ export const AlimentosParaMascotas = () => {
 
                         <h1 className="titulo">Alimento Para Mascotas</h1>
 
-                        <label for="tipo-mascota" className="label">Selecciona el tipo de mascota: </label>
+                        <label htmlFor="tipo-mascota" className="label">Selecciona el tipo de mascota: </label>
                         <br />
                         <select className="input" name="tipo-mascota" id="tipo-mascota">
                             <option value=""></option>
                             <option value="Perros">Perros</option>
                         </select>
                         <br />
-                        <label for="identificacion" className="label">Identificación del Solicitante: </label>
+                        <label htmlFor="identificacion" className="label">Identificación del Solicitante: </label>
                         <br />
                         <input type="number" className="input" id="identificacion" placeholder="Ingresa tú Número de Identificación"/>
                         <br />
-                        <label for="nombre" className="label">Solicitante del Servicio: </label>
+                        <label htmlFor="nombre" className="label">Solicitante del Servicio: </label>
                         <br />
                         <input type="text" className="input" id="nombre" placeholder="Se Muestra tú Nombre"/>
                         <br /><br />
-                        <label for="porductos" className="label">Listado de Alimentos Según Mascota: </label>
+                        <label className="label">Listado de Alimentos Según Mascota: </label>
                         <br />
                         <fieldset className="productos" id="productos">
 
@@ -126,11 +126,11 @@ export const AlimentosParaMascotas = () => {
                         </fieldset>
                     
                         <br /><br />
-                        <article className="botones">
+                        <div className="botones">
                             <button className="botones-sistema">Generar Servicio</button>
                             <button className="botones-sistema">Gestionar Pago</button>
                             <button className="botones-sistema">Salir</button>
-                        </article>
+                        </div>
                         <br /><br />
 
                         <dialog className="manejo-errores" title="Advertencia">

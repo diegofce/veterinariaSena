@@ -59,15 +59,12 @@ export const Index = () => {
 
             <Link to="#" className="links">Olvido Contraseña</Link>
           </div>
-
           <dialog className="manejo-errores" title="Advertencia">
             <p className="texto-interno">La Contraseña o el Usuario no coinciden</p>
             <button className="salir-ventana-emergente">Salir</button>
           </dialog>
-
         </div>
       </div>
-      
     </div>
   )
 }
