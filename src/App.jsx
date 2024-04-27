@@ -35,7 +35,11 @@ function App() {
         <Route path='/medicamentosmascotas' element = { <MedicamentosParaMascotas /> } />index
         
         
-      </Routes>     
+      </Routes>
+
+      <footer>
+        Derechos reservados de Autor
+      </footer>     
     
     </BrowserRouter>
 

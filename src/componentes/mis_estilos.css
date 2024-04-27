@@ -90,7 +90,6 @@
   max-width: 100%;
   height: auto;
 }
-
 .button {
   text-align: center;
 }
@@ -108,7 +107,7 @@
 /*para el manejo de los input*/
 .input-1 {
   background-color: #8eb540;
-  width: 325px;
+  width: 315px;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   color: rgb(87, 53, 41);
   font-size: 26px;

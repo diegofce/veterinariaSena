@@ -1,17 +1,28 @@
 import React from "react";
 import { useForm } from "react-hook-form";
+import { useNavigate } from "react-router-dom";
+
 
 
 export const RegistroUsuarios = () => {
 
-    const { register, handleSubmit} = useForm();
+    const {register, handleSubmit} = useForm();
+
+    const navigate = useNavigate();
 
     const enviar = (data) => {
 
-        console.log(data);
+        console.log(data)
+
     }
 
+    const open = (ruta) => {
 
+        navigate(ruta);
+    
+    }
+
+    
     return ( 
 
         <div className='body'>
@@ -20,23 +31,25 @@ export const RegistroUsuarios = () => {
 
                 <div className="formulario_spa">
                 
-                    <form action=""  onSubmit = { handleSubmit(enviar) }>
+                    <form action=""  onSubmit={ handleSubmit(enviar) }>
                         
                         <h1 className="titulo">Registro de Usuario</h1>
 
-                        <label className="label" for="primernombre">Primer Nombre:</label><br />
-                        <input className="input" type="text" id="primernombre" placeholder="Ingresa tus Nombres " {...register("primernombre")}/>
+                        <label className="label" for="primernombre">Primer Nombre:</label>
+                        <br />
+                        <input className="input" type="text" id="primernombre" placeholder="Ingresa tu Primer Nombre" {...register("primernombre")}/>
                         <br/>
-                        <label className="label" for="segundonombre">Segundo Nombre:</label><br />
-                        <input className="input" type="text" id="segundonombre" placeholder="Ingresa tus Nombres " {...register("segundonombre")}/>
+                        <label className="label" for="segundonombre">Segundo Nombre:</label>
+                        <br />
+                        <input className="input" type="text" id="segundonombre" placeholder="Ingresa tu Segundo Nombre" {...register("segundonombre")}/>
                         <br />
                         <label className="label" for="primerapellido">Primer Apellido: </label>
                         <br />
-                        <input className="input" type="text" id="primerapellido" placeholder="Ingresa tus Apellidos" {...register("primerapellido")}/>
-                        <br />
+                        <input className="input" type="text" id="primerapellido" placeholder="Ingresa tu Primer Apellido" {...register("primerapellido")}/>
+                        <br/>
                         <label className="label" for="segundoapellido">Segundo Apellido: </label>
                         <br />
-                        <input className="input" type="text" id="segundoapellido" placeholder="Ingresa tus Apellidos" {...register("segundoapellido")}/>
+                        <input className="input" type="text" id="segundoapellido" placeholder="Ingresa tu Segundo Apellido" {...register("segundoapellido")}/>
                         <br />
                         <label className="label" for="identificacion">Identificación:</label>
                         <br />
@@ -61,21 +74,23 @@ export const RegistroUsuarios = () => {
                         <label className="label" for="ciudad">Ciudad Residencia:</label>
                         <br />
                         <input className="input" type="text" id="ciudad" placeholder="Ingresa la Ciudad de Residencia" {...register("ciudad")}/>
-                        <br /><br />
-                        
-                        <div className="botones">
-                            <button className="botones-sistema" type="submit">Registrarse</button>
-                        </div>
                         <br/>
-                        
+                        <label className="label" for="departamento">Departamento Residencia:</label>
+                        <br />
+                        <input className="input" type="text" id="departamento" placeholder="Ingresa el departamento de Residencia" {...register("departamento")}/>
+                        <br /><br />
+                        <div className="botones">
+                            <button className="botones-sistema">Registrarse</button>
+                        </div>
                     </form>
+                    <br/>
                     <div className="button">
-
-                        <button className="botones-sistema">Registrar Mascota</button>
-                        <button className="botones-sistema" >Salir</button>
-
+                        <button className="botones-sistema" onClick={() => open("/registromascota")}>Registrar Mascota</button>
+                        <button className="botones-sistema" onClick={() => open("/")}>Inicio</button>
                     </div>
+
                 </div>
+
                 
             </div>
 
