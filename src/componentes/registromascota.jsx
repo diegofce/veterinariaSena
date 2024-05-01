@@ -71,7 +71,8 @@ export const RegistroMascota = () => {
 
                             <div>
 
-                                <input className="input-1" type="number" id="peso" placeholder="Ingresa el Peso" {...register("peso")}/><span className="label" for="peso">Kg</span>
+                                <input className="input-1" type="number" id="peso" placeholder="Ingresa el Peso" {...register("peso")}/>
+                                <span className="label" for="peso">Kg</span>
 
                             </div>
 
@@ -143,6 +144,6 @@ export const RegistroMascota = () => {
             </div>
 
         </div>
-
+        
     );
 }

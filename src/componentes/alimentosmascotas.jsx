@@ -139,10 +139,10 @@ export const AlimentosParaMascotas = () => {
                         </dialog>
                     </form>
                 </div>
-                
+
             </div>
 
         </div>
-
+        
     );
 }

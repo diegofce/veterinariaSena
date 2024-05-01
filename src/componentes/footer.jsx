@@ -39,18 +39,19 @@ export const Footer = () => {
                         <h4>Tienda</h4>
 
                         <ul>
-                            <li><Link to= "#">Alimentos para Mascotas</Link></li>
-                            <li><Link to= "#">Accesorios para Mascotas</Link></li>
-                            <li><Link to= "#">Medicamentos para Mascotas</Link></li>
+                            <li><Link to= "spa">Spa</Link></li>
+                            <li><Link to= "/alimentosmascotas">Alimentos para Mascotas</Link></li>
+                            <li><Link to= "/accesoriosmascotas">Accesorios para Mascotas</Link></li>
+                            <li><Link to= "/medicamentosmascotas">Medicamentos para Mascotas</Link></li>
                         </ul>
 
                     </div>
 
-                    <div className="social-links">
+                    <div className="footer-links">
 
                         <h4>Siguenos</h4>
 
-                        <div>
+                        <div className="social-links">
                             <Link to= "#"><i className="fab fa-facebook-f"></i></Link>
                             <Link to= "#"><i className="fab fa-instagram"></i></Link>
                             <Link to= "#"><i className="fab fa-twitter"></i></Link>

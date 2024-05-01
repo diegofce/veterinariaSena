@@ -5,8 +5,7 @@ import { Link } from "react-router-dom";
 
 //creamos el componente del navegador que estará en todas las páginas
 export const NavBar = () => {
-
-    
+   
     return ( 
 
         /*El div que retorna toda la visualización del menú */
@@ -47,7 +46,7 @@ export const NavBar = () => {
             </nav>
 
         </div>
-
+        
     );
 }
  

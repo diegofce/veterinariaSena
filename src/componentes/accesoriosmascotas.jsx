@@ -132,7 +132,7 @@ export const AccesoriosParaMascotas = () => {
                         <div className="botones">
                             <button className="botones-sistema">Generar Servicio</button>
                             <button className="botones-sistema">Gestionar Pago</button>
-                            <button className="botones-sistema">Salir</button>
+                            <button className="botones-sistema">Inicio</button>
                         </div>
                         <br /><br />
                     
@@ -140,7 +140,7 @@ export const AccesoriosParaMascotas = () => {
                 </div>
 
             </div>
-
+            
         </div>
     );
 }

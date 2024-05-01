@@ -1,23 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
-// const Modal = ({ onClose }) => {
-//     return (
-//       <div className="modal">
-//         <div className="modal-content">
-//           <p>El servicio solicitado no está disponible.</p>
-//           <button onClick={onClose}>Cerrar</button>
-//         </div>
-//       </div>
-//     );
-//   };
-
 
 export const Servicios = () => {
 
     const navigate = useNavigate();
     const [servicioSolicitado, setServicioSolicitado] = useState("");
-    const [showModal, setShowModal] = useState(false);
 
     const open = (ruta) => {
 
@@ -45,14 +33,11 @@ export const Servicios = () => {
 
         } else {
 
-            setShowModal(true);
+            alert("El Servicio Solicitado No Esta Disponible!!");
 
         }
     }
-    const handleCloseModal = () => {
-
-        setShowModal(false);
-    };
+   
 
     return ( 
 
@@ -101,19 +86,20 @@ export const Servicios = () => {
                     </form>
                     <div className="button">
                         
-                        <button className="botones-sistema" onClick={ () => open("/")}>Salir</button>
+                        <button className="botones-sistema" onClick={ () => open("/")}>Inicio</button>
 
                     </div>
                     <br /><br />
-                    {/* {showModal && <Modal onClose={handleCloseModal} />} */}
-                    <dialog className="manejo-errores" title="Advertencia" open={showModal}>
+                    
+                    <dialog className="manejo-errores" title="Advertencia">
 
                         <p className="texto-interno">El Servicio Solicitado No Está Disponible</p>
-                        <button className="salir-ventana-emergente" onClick={handleCloseModal}>Salir</button>
+                        <button className="salir-ventana-emergente">Salir</button>
 
                     </dialog>
 
                 </div>
+                
             </div>
 
         </div>

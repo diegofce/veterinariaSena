@@ -61,7 +61,7 @@ export const Spa = () => {
 
                         <button className="botones-sistema">Generar Servicio</button>
                         <button className="botones-sistema">Gestionar Pago</button>
-                        <button className="botones-sistema">Salir</button>
+                        <button className="botones-sistema">Inicio</button>
 
                     </div>
                     <br /><br />

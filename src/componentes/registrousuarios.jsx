@@ -95,7 +95,7 @@ export const RegistroUsuarios = () => {
             </div>
 
         </div>
-
+        
     );
 }
  
