@@ -13,11 +13,11 @@ export const Spa = () => {
 
                     <h1 className="titulo">Agendar cita para Servicio de Spa</h1>
 
-                    <label for="identificacion" className="label">Identificación del Solicitante: </label>
+                    <label htmlFor="identificacion" className="label">Identificación del Solicitante: </label>
                     <br />
                     <input type="number" className="input" id="identificacion" placeholder="Ingresa tú Número de Identificación"/>
                     <br />
-                    <label for="nombre" className="label">Solicitante del Servicio: </label>
+                    <label htmlFor="nombre" className="label">Solicitante del Servicio: </label>
                     <br />
                     <input type="text" className="input" id="nombre" placeholder="Ingresa tú Nombre"/>
                     <br /><br />
@@ -26,7 +26,7 @@ export const Spa = () => {
 
                         <div>
 
-                            <label for="fecha-servicio" className="label">Fecha del Servicio: </label>
+                            <label htmlFor="fecha-servicio" className="label">Fecha del Servicio: </label>
                             <br />
                             <input className="input-1" type="date" name="fecha-servicio" id="fecha-servicio"/>
 
@@ -34,7 +34,7 @@ export const Spa = () => {
                         
                         <div>
 
-                            <label for="hora-servicio" className="label">Hora del Servicio:</label>
+                            <label htmlFor="hora-servicio" className="label">Hora del Servicio:</label>
                             <br />
                             <input className="input-1" type="time" name="hora-servicio" id="hora-servicio"/>
 
@@ -42,11 +42,11 @@ export const Spa = () => {
 
                     </div>
 
-                    <label for="nombre-mascota" className="label">Nombre de la Mascota: </label>
+                    <label htmlFor="nombre-mascota" className="label">Nombre de la Mascota: </label>
                     <br />
                     <input type="text" className="input" id="nombre-mascota" placeholder="Ingresa el Nombre de la Mascota"/>
                     <br />
-                    <label for="valor-servicio" className="label">Valor del Servicio: </label>
+                    <label htmlFor="valor-servicio" className="label">Valor del Servicio: </label>
                     <br />
                     <input type="number" className="input" id="valor-servicio" placeholder="valor del servicio"/>
 
@@ -61,7 +61,7 @@ export const Spa = () => {
 
                         <button className="botones-sistema">Generar Servicio</button>
                         <button className="botones-sistema">Gestionar Pago</button>
-                        <button className="botones-sistema">Salir</button>
+                        <button className="botones-sistema">Inicio</button>
 
                     </div>
                     <br /><br />
