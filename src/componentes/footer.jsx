@@ -43,7 +43,12 @@ export const Footer = () => {
 
             <ul>
               <li>
-                <Link to="spa">Spa</Link>
+                <Link to="/spa">Spa</Link>
+              </li>
+              <li>
+                <Link to="/agendarcitaveterinaria">
+                  Agendar Cita Veterinaria
+                </Link>
               </li>
               <li>
                 <Link to="/alimentosmascotas">Alimentos para Mascotas</Link>
