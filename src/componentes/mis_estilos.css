@@ -472,10 +472,13 @@ a:visited {
 
 /* Media Queries */
 
-@media only screen and (min-width: 1025px) {
+@media only screen and (min-width: 1000px) {
   /* Ajustes para pantallas grandes */
   .container {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .bienvenida {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   body {
@@ -498,10 +501,24 @@ a:visited {
 }
 
 /* Media Query para pantallas de 769px a 1024px */
-@media only screen and (min-width: 769px) and (max-width: 1024px) {
+@media only screen and (min-width: 721px) and (max-width: 999px) {
+  body {
+    min-height: 100vh;
+    background-image: linear-gradient(
+        rgba(255, 255, 243, 0.65),
+        rgba(255, 255, 243, 0.65)
+      ),
+      url("../img/logo veterinaria con nombre.png");
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: fixed;
+    background-size: contain;
+    background-color: #fffff3;
+  }
+
   /* Ajustes para pantallas medianas */
   .bienvenida {
-    grid-template-columns: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
   }
 
   /* Ajustes adicionales de tamaño de letra */
@@ -576,26 +593,16 @@ a:visited {
     font-weight: bold;
     padding: 5px;
   }
-  body {
-    min-height: 100vh;
-    background-image: linear-gradient(
-        rgba(255, 255, 243, 0.65),
-        rgba(255, 255, 243, 0.65)
-      ),
-      url("../img/logo veterinaria con nombre.png");
-    background-repeat: no-repeat;
-    background-position: center center;
-    background-attachment: fixed;
-    background-size: contain;
-    background-color: #fffff3;
-  }
 }
 
 /* Media Query para pantallas de 600px a 768px */
-@media only screen and (min-width: 600px) and (max-width: 768px) {
+@media only screen and (min-width: 540px) and (max-width: 720px) {
   /* Ajustes para pantallas medianas */
   .bienvenida {
-    grid-template-columns: 1fr;
+    grid-template-columns: auto;
+  }
+  .container {
+    grid-template-columns: auto;
   }
 
   /* Ajustes adicionales de tamaño de letra */
@@ -702,16 +709,69 @@ a:visited {
   .label-check1 {
     font-size: 14px;
   }
+  .footer-row,
+  .social-links {
+    text-align: center;
+  }
+  .footer-links {
+    width: 100%;
+    margin-bottom: 2px;
+  }
+  .mostrador {
+    width: 80%;
+    transition: 0.5s ease;
+  }
+
+  .mostrador .fila {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+  }
+
+  .mostrador .fila .item {
+    max-width: 100px;
+    padding: 5px;
+    height: 150px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+
+  .mostrador .fila .item:hover {
+    background-color: #c2e281;
+  }
+
+  .mostrador .fila .item img {
+    width: 30px;
+  }
+
+  .mostrador .fila .item .descripcion-articulos {
+    color: #573529;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .mostrador .fila .item .precio {
+    color: #f74343;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .contenedor-foto {
+    height: 80px;
+    width: 80px;
+  }
 }
 
 /* Media Query para pantallas de 320px a 599px */
-@media only screen and (min-width: 250px) and (max-width: 599px) {
+@media only screen and (min-width: 200px) and (max-width: 539px) {
   /* Ajustes para pantallas pequeñas */
   .container,
   .bienvenida,
   .bienvenida-1,
   .bienvenida-1-1,
-  .bienvenida_spa {
+  .bienvenida_spa,
+  .productos {
     grid-template-columns: 1fr;
   }
 
@@ -734,9 +794,12 @@ a:visited {
     background-size: contain;
     background-color: #fffff3;
   }
+  .parrafos {
+    width: 300px;
+  }
   .input {
     background-color: #8eb540;
-    width: 450px;
+    width: 330px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     color: rgb(87, 53, 41);
     font-size: 26px;
@@ -826,5 +889,49 @@ a:visited {
   }
   .label-check1 {
     font-size: 14px;
+  }
+  .mostrador {
+    width: 50%;
+    transition: 0.5s ease;
+  }
+
+  .mostrador .fila {
+    display: flex;
+    justify-content: space-between;
+    margin: 5px;
+  }
+
+  .mostrador .fila .item {
+    max-width: 100px;
+    padding: 5px;
+    height: 180px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.5s;
+  }
+
+  .mostrador .fila .item:hover {
+    background-color: #c2e281;
+  }
+
+  .mostrador .fila .item img {
+    width: 30px;
+  }
+
+  .mostrador .fila .item .descripcion-articulos {
+    color: #573529;
+    font-weight: bold;
+    font-size: 14px;
+  }
+
+  .mostrador .fila .item .precio {
+    color: #f74343;
+    font-weight: bold;
+    font-size: 12px;
+  }
+  .contenedor-foto {
+    height: 50px;
+    width: 50px;
   }
 }
