@@ -1,5 +1,5 @@
 // realizamos todas las importaciones necesarias
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
 import { Modal } from "./modal";

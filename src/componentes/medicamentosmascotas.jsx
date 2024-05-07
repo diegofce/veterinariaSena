@@ -2,7 +2,6 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
-import { useState } from "react";
 
 // creamos el componente
 export const MedicamentosParaMascotas = () => {
@@ -22,59 +21,6 @@ export const MedicamentosParaMascotas = () => {
     navigate(ruta);
   };
 
-  const [filtros, setFiltros] = useState({
-    categorias: [],
-    marcas: [],
-  });
-
-  const toggleFiltro = (tipo, valor) => {
-    const nuevosFiltros = { ...filtros };
-    if (nuevosFiltros[tipo].includes(valor)) {
-      nuevosFiltros[tipo] = nuevosFiltros[tipo].filter(
-        (item) => item !== valor
-      );
-    } else {
-      nuevosFiltros[tipo] = [...nuevosFiltros[tipo], valor];
-    }
-    setFiltros(nuevosFiltros);
-  };
-
-  // Filtrar los elementos dentro del fieldset según los filtros seleccionados
-  const filtrarProductos = () => {
-    // Si no hay filtros seleccionados, mostrar todos los productos
-    if (filtros.categorias.length === 0 && filtros.marcas.length === 0) {
-      return true;
-    }
-
-    // Filtrar por categorías
-    if (filtros.categorias.length > 0) {
-      const categoriasSeleccionadas = filtros.categorias;
-      // Verificar si al menos una categoría está presente en los productos
-      if (
-        categoriasSeleccionadas.some(
-          (categoria) => document.getElementById(categoria).checked
-        )
-      ) {
-        return true;
-      }
-    }
-
-    // Filtrar por marcas
-    if (filtros.marcas.length > 0) {
-      const marcasSeleccionadas = filtros.marcas;
-      // Verificar si al menos una marca está presente en los productos
-      if (
-        marcasSeleccionadas.some(
-          (marca) => document.getElementById(marca).checked
-        )
-      ) {
-        return true;
-      }
-    }
-
-    return false;
-  };
-
   return (
     <div className="body">
       <div className="bienvenida">
@@ -88,56 +34,41 @@ export const MedicamentosParaMascotas = () => {
               <nav className="menus">
                 <ul className="ul-menu1" id="categorias">
                   <li>
-                    <input
-                      type="checkbox"
-                      id="antipulgas"
-                      onChange={() => toggleFiltro("categorias", "antipulgas")}
-                    />
-                    <label className="label-check1" htmlFor="antipulgas">
+                    <input type="checkbox" id="filtro-antipulgas" />
+                    <label className="label-check1" htmlFor="filtro-antipulgas">
                       Antipulgas
                     </label>
                   </li>
                   <li>
-                    <input
-                      type="checkbox"
-                      id="antiparasitarios"
-                      onChange={() =>
-                        toggleFiltro("categorias", "antiparasitarios")
-                      }
-                    />
-                    <label className="label-check1" htmlFor="antiparasitarios">
-                      Antiparasitarios
+                    <input type="checkbox" id="filtro-antiparasitario" />
+                    <label
+                      className="label-check1"
+                      htmlFor="filtro-antiparasitario"
+                    >
+                      Antiparasitario
                     </label>
                   </li>
                   <li>
-                    <input
-                      type="checkbox"
-                      id="vitaminas"
-                      onChange={() => toggleFiltro("categorias", "vitaminas")}
-                    />
-                    <label className="label-check1" htmlFor="vitaminas">
+                    <input type="checkbox" id="filtro-vitaminas" />
+                    <label className="label-check1" htmlFor="filtro-vitaminas">
                       Vitaminas
                     </label>
                   </li>
                   <li>
-                    <input
-                      type="checkbox"
-                      id="suplementos"
-                      onChange={() => toggleFiltro("categorias", "suplementos")}
-                    />
-                    <label className="label-check1" htmlFor="suplementos">
+                    <input type="checkbox" id="filtro-suplementos" />
+                    <label
+                      className="label-check1"
+                      htmlFor="filtro-suplementos"
+                    >
                       Suplementos
                     </label>
                   </li>
                   <li>
-                    <input
-                      type="checkbox"
-                      id="medicamentos"
-                      onChange={() =>
-                        toggleFiltro("categorias", "medicamentos")
-                      }
-                    />
-                    <label className="label-check1" htmlFor="medicamentos">
+                    <input type="checkbox" id="filtro-medicamentos" />
+                    <label
+                      className="label-check1"
+                      htmlFor="filtro-medicamentos"
+                    >
                       Medicamentos
                     </label>
                   </li>
@@ -151,42 +82,26 @@ export const MedicamentosParaMascotas = () => {
               <nav className="menus">
                 <ul className="ul-menu1" id="marcas">
                   <li>
-                    <input
-                      type="checkbox"
-                      id="hills"
-                      onChange={() => toggleFiltro("marcas", "hills")}
-                    />
-                    <label className="label-check1" htmlFor="hills">
+                    <input type="checkbox" id="filtro-hills" />
+                    <label className="label-check1" htmlFor="filtro-hills">
                       Hills
                     </label>
                   </li>
                   <li>
-                    <input
-                      type="checkbox"
-                      id="bayer"
-                      onChange={() => toggleFiltro("marcas", "bayer")}
-                    />
-                    <label className="label-check1" htmlFor="bayer">
+                    <input type="checkbox" id="filtro-bayer" />
+                    <label className="label-check1" htmlFor="filtro-bayer">
                       Bayer
                     </label>
                   </li>
                   <li>
-                    <input
-                      type="checkbox"
-                      id="bistop"
-                      onChange={() => toggleFiltro("marcas", "bistop")}
-                    />
-                    <label className="label-check1" htmlFor="bistop">
+                    <input type="checkbox" id="filtro-bistop" />
+                    <label className="label-check1" htmlFor="filtro-bistop">
                       Bistop
                     </label>
                   </li>
                   <li>
-                    <input
-                      type="checkbox"
-                      id="baytril"
-                      onChange={() => toggleFiltro("marcas", "baytril")}
-                    />
-                    <label className="label-check1" htmlFor="baytril">
+                    <input type="checkbox" id="filtro-baytril" />
+                    <label className="label-check1" htmlFor="filtro-baytril">
                       Baytril
                     </label>
                   </li>
@@ -251,10 +166,7 @@ export const MedicamentosParaMascotas = () => {
             <fieldset className="productos" id="productos">
               <div className="mostrador" id="mostrador">
                 <div className="fila">
-                  <div
-                    className="item"
-                    style={{ display: filtrarProductos() ? "block" : "none" }}
-                  >
+                  <div className="item">
                     <div className="contenedor-foto">
                       <img
                         src={require("../img/Traumeel_Caja_x_50_tabletas sin fondo.png")}
@@ -267,10 +179,7 @@ export const MedicamentosParaMascotas = () => {
                     </div>
                   </div>
 
-                  <div
-                    className="item"
-                    style={{ display: filtrarProductos() ? "block" : "none" }}
-                  >
+                  <div className="item">
                     <div className="contenedor-foto">
                       <img
                         src={require("../img/Zeel_Compositum_AD_US_VET_x_100_Tabletas sin fondo.png")}
@@ -283,10 +192,7 @@ export const MedicamentosParaMascotas = () => {
                     </div>
                   </div>
 
-                  <div
-                    className="item"
-                    style={{ display: filtrarProductos() ? "block" : "none" }}
-                  >
+                  <div className="item">
                     <div className="contenedor-foto">
                       <img
                         src={require("../img/Antiparasitario_Drontal_para_gatos sin fondo.png")}
@@ -299,10 +205,7 @@ export const MedicamentosParaMascotas = () => {
                     </div>
                   </div>
 
-                  <div
-                    className="item"
-                    style={{ display: filtrarProductos() ? "block" : "none" }}
-                  >
+                  <div className="item">
                     <div className="contenedor-foto">
                       <img
                         src={require("../img/Galgocal_Antiparasitario_Interno_para_Perros_y_Gatos_200_x_2_Tabletas sin fondo.png")}
@@ -318,10 +221,7 @@ export const MedicamentosParaMascotas = () => {
                 </div>
 
                 <div className="fila">
-                  <div
-                    className="item"
-                    style={{ display: filtrarProductos() ? "block" : "none" }}
-                  >
+                  <div className="item">
                     <div className="contenedor-foto">
                       <img
                         src={require("../img/Credelio_Cat_por_48mg_para_gatos_de__2_a_8Kg__3_Tbls_Azul sin fondo.png")}
