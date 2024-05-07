@@ -470,6 +470,50 @@ a:visited {
   place-content: center;
 }
 
+/*se da estilo a las ventanas modales*/
+.modal {
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75);
+  display: none;
+  justify-content: center;
+  text-align: center;
+}
+.modal.is-open {
+  display: flex;
+}
+
+.modal-container {
+  position: relative;
+  background-color: #fffff3;
+  min-width: 250px;
+  max-width: 900px;
+  min-height: 200px;
+  max-height: 800px;
+  color: #573529;
+  font-family: "snap ITC";
+  font-size: 24px;
+  padding: 1rem;
+  margin: auto;
+  border-radius: 30px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+.modal-container h2 {
+  color: #8eb540;
+}
+.modal-container iframe {
+  width: 600px;
+  height: 400px;
+}
+.link-icono {
+  cursor: pointer;
+}
+
 /* Media Queries */
 
 @media only screen and (min-width: 1000px) {

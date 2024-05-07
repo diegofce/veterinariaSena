@@ -1,37 +1,61 @@
-import React, { useState } from "react";
+// realizamos todas las importaciones necesarias
+import React, { useEffect, useState } from "react";
+import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import { Modal } from "./modal";
+import garras from "../img/icons8-huellas-de-garras-96.png";
+import garras2 from "../img/icons8-huellas-de-garras-48.png";
+import { useModal } from "./useModal";
 
 export const Servicios = () => {
+  // creamos el useNavigate
   const navigate = useNavigate();
-  const [servicioSolicitado, setServicioSolicitado] = useState("");
 
+  //creamos el useModal
+  const [isOpenRegistro, openRegistro, closeRegistro] = useModal();
+
+  // creamos el useState
+  const [option, setOption] = useState("");
+
+  // creamos el useForm
+  const { register, handleSubmit } = useForm();
+
+  // creamos la funcion para la navegación con los botones
   const open = (ruta) => {
     navigate(ruta);
   };
 
+  // Creamos la funcion para llevar los datos
+  const enviar = (data) => {
+    console.log(data);
+  };
+
+  // creamos la validación para la navegación
   const validate = () => {
-    if (servicioSolicitado === "Spa") {
+    if (option === "Spa") {
       open("/Spa");
-    } else if (servicioSolicitado === "Alimentos para Mascotas") {
+    } else if (option === "Alimentos para Mascotas") {
       open("/alimentosmascotas");
-    } else if (servicioSolicitado === "Accesorios para Mascotas") {
+    } else if (option === "Accesorios para Mascotas") {
       open("/accesoriosmascotas");
-    } else if (servicioSolicitado === "Medicamentos para Mascotas") {
+    } else if (option === "Medicamentos para Mascotas") {
       open("/medicamentosmascotas");
-    } else if (servicioSolicitado === "Agendar Cita Veterinaria") {
+    } else if (option === "Agendar Cita Veterinaria") {
       open("/agendarcitaveterinaria");
-    } else if (servicioSolicitado === "Urgencias") {
+    } else if (option === "Urgencias") {
       open("/urgencias");
     } else {
-      alert("El Servicio Solicitado No Esta Disponible!!");
+      // alert("Debes Elegir Una De Las Categorias De Servicios");
+      openRegistro();
     }
   };
 
+  //hacemos el return para la pagina
   return (
     <div className="body">
       <div className="bienvenida">
         <div className="formulario_spa">
-          <form action="">
+          <form action="" onSubmit={handleSubmit(enviar)}>
             <h1 className="titulo">Servicios</h1>
 
             <label htmlFor="servicios" className="label">
@@ -42,7 +66,8 @@ export const Servicios = () => {
               className="input"
               name="servicios"
               id="servicios"
-              onChange={(e) => setServicioSolicitado(e.target.value)}
+              onChange={(e) => setOption(e.target.value)}
+              // {...register("option")}
             >
               <option value=""></option>
               <option value="Spa">Spa</option>
@@ -71,6 +96,8 @@ export const Servicios = () => {
               className="input"
               id="identificacion"
               placeholder="Ingresa tú Número de Identificación"
+              name="identificacion"
+              {...register("identificacion")} // capturamos la información del campo
             />
             <br />
             <label htmlFor="nombre" className="label">
@@ -82,6 +109,8 @@ export const Servicios = () => {
               className="input"
               id="nombre"
               placeholder="Ingresa tú Nombre"
+              name="nombre"
+              {...register("nombre")} // capturamos la información del campo
             />
             <br />
             <br />
@@ -102,12 +131,23 @@ export const Servicios = () => {
           <br />
           <br />
 
-          <dialog className="manejo-errores" title="Advertencia">
-            <p className="texto-interno">
-              El Servicio Solicitado No Está Disponible
-            </p>
-            <button className="salir-ventana-emergente">Salir</button>
-          </dialog>
+          <Modal isOpen={isOpenRegistro} closeModal={closeRegistro}>
+            <div>
+              <img src={garras2} alt="iconos de garras mas pequeños" />
+              <img src={garras} alt="iconos" />
+              <img src={garras2} alt="iconos de garras mas pequeños" />
+            </div>
+            <div>
+              <h2>Advertencia!!</h2>
+              <p>Debes Elegir Una De Las Categorias De Servicios</p>
+            </div>
+            <div>
+              <img src={garras2} alt="iconos de garras mas pequeños" />
+              <img src={garras} alt="iconos" />
+              <img src={garras2} alt="iconos de garras mas pequeños" />
+            </div>
+            <br />
+          </Modal>
         </div>
       </div>
     </div>

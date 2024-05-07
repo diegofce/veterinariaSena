@@ -1,23 +1,32 @@
+// importamos las librerias necesarias
 import React from "react";
 import { useForm } from "react-hook-form";
 import { useNavigate } from "react-router-dom";
+import garras from "../img/icons8-huellas-de-garras-96.png";
+import garras2 from "../img/icons8-huellas-de-garras-48.png";
+import { useModal } from "./useModal";
+import { Modal } from "./modal";
 
+// creamos el componente
 export const RegistroMascota = () => {
+  // usamos el useForm
   const { register, handleSubmit } = useForm();
-
+  // usamos el useModal personalizado
+  const [isOpenRegistro, openRegistro, closeRegistro] = useModal(false);
+  // usamos el useNavigate para la funcinalidad de los botones
   const navigate = useNavigate();
-
+  // cramos la función par la navegación
   const Open = (ruta) => {
     navigate(ruta);
   };
-
+  // cramos la función para el manejo  de los datos del formulario
   const enviar = (data) => {
     data.vacuna1 = data.vacuna1 ? "Rabia" : "";
     data.vacuna2 = data.vacuna2 ? "Parvovirosis" : "";
 
     console.log(data);
   };
-
+  // retornamos la página
   return (
     <div className="body">
       <div className="bienvenida">
@@ -34,7 +43,7 @@ export const RegistroMascota = () => {
               type="text"
               id="nombre mascota"
               placeholder="Ingresa el Nombre de la Mascota"
-              {...register("nombre mascota")}
+              {...register("nombre mascota")} //capturamos el valor introducido por el Usuario
             />
             <br />
             <label className="label" htmlFor="raza">
@@ -46,7 +55,7 @@ export const RegistroMascota = () => {
               type="text"
               id="raza"
               placeholder="Ingresa la raza de la Mascota"
-              {...register("raza")}
+              {...register("raza")} //capturamos el valor introducido por el Usuario
             />
             <br />
             <label className="label" htmlFor="especie">
@@ -57,7 +66,7 @@ export const RegistroMascota = () => {
               className="input"
               name="Especie"
               id="especie"
-              {...register("specie")}
+              {...register("specie")} //capturamos el valor introducido por el Usuario
             >
               <option className="input" value=""></option>
               <option className="input" value="Perro">
@@ -89,7 +98,7 @@ export const RegistroMascota = () => {
                   type="number"
                   id="edad"
                   placeholder="Ingresa la Edad "
-                  {...register("edad")}
+                  {...register("edad")} //capturamos el valor introducido por el Usuario
                 />
                 <span className="label" htmlFor="peso">
                   Años
@@ -102,7 +111,7 @@ export const RegistroMascota = () => {
                   type="number"
                   id="peso"
                   placeholder="Ingresa el Peso"
-                  {...register("peso")}
+                  {...register("peso")} //capturamos el valor introducido por el Usuario
                 />
                 <span className="label" htmlFor="peso">
                   Kg
@@ -123,7 +132,7 @@ export const RegistroMascota = () => {
                 type="checkbox"
                 name="vacuna1"
                 id="checkbox1"
-                {...register("vacuna1")}
+                {...register("vacuna1")} //capturamos el valor introducido por el Usuario
               />
               <label className="label-check" htmlFor="checkbox1">
                 Rabia
@@ -133,7 +142,7 @@ export const RegistroMascota = () => {
                 className="input-2"
                 name="Cantidad Vacunas"
                 id="checkbox1"
-                {...register("cantidad1")}
+                {...register("cantidad1")} //capturamos el valor introducido por el Usuario
               >
                 <option className="input-2" value=""></option>
                 <option className="input-2" value="1">
@@ -155,7 +164,7 @@ export const RegistroMascota = () => {
                 type="checkbox"
                 name="checkbox2"
                 id="checkbox2"
-                {...register("vacuna2")}
+                {...register("vacuna2")} //capturamos el valor introducido por el Usuario
               />
               <label className="label-check" htmlFor="checkbox2">
                 Parvovirosis
@@ -165,7 +174,7 @@ export const RegistroMascota = () => {
                 className="input-2"
                 name="Cantidad Vacunas"
                 id="checkbox2"
-                {...register("cantidad2")}
+                {...register("cantidad2")} //capturamos el valor introducido por el Usuario
               >
                 <option className="input-2" value=""></option>
                 <option className="input-2" value="1">
@@ -192,7 +201,7 @@ export const RegistroMascota = () => {
               type="number"
               id="ident-propietario"
               placeholder="Ingresa tú Identificación"
-              {...register("identificacion")}
+              {...register("identificacion")} //capturamos el valor introducido por el Usuario
             />
             <br />
             <label className="label" htmlFor="nom-propietario">
@@ -204,7 +213,7 @@ export const RegistroMascota = () => {
               type="text"
               id="nom-propietario"
               placeholder="Ingresa tú Nombre"
-              {...register("nombrepropietario")}
+              {...register("nombrepropietario")} //capturamos el valor introducido por el Usuario
             />
             <br />
             <label className="label" htmlFor="telefono">
@@ -216,12 +225,14 @@ export const RegistroMascota = () => {
               type="phone"
               id="telefono"
               placeholder="Ingresa tú Número de Teléfono"
-              {...register("telefono")}
+              {...register("telefono")} //capturamos el valor introducido por el Usuario
             />
             <br />
 
             <div className="botones">
-              <button className="botones-sistema">Registrar Mascota</button>
+              <button className="botones-sistema" onClick={openRegistro}>
+                Registrar Mascota
+              </button>
             </div>
           </form>
 
@@ -229,14 +240,36 @@ export const RegistroMascota = () => {
 
           <div className="button">
             <button className="botones-sistema" onClick={() => Open("/")}>
+              {" "}
+              {/*navegamos a la pagina en mención */}
               Inicio
             </button>
             <button
               className="botones-sistema"
-              onClick={() => Open("/servicios")}
+              onClick={() => Open("/servicios")} //navegamos a la página en mención
             >
               Ingresar
             </button>
+            {/* creamos la ventana modal */}
+            <div>
+              <Modal isOpen={isOpenRegistro} closeModal={closeRegistro}>
+                <div>
+                  <img src={garras2} alt="iconos de garras mas pequeños" />
+                  <img src={garras} alt="iconos" />
+                  <img src={garras2} alt="iconos de garras mas pequeños" />
+                </div>
+                <div>
+                  <h2>Confirmación!!</h2>
+                  <p>La Mascota Se Ha Creado Con Exito</p>
+                </div>
+                <div>
+                  <img src={garras2} alt="iconos de garras mas pequeños" />
+                  <img src={garras} alt="iconos" />
+                  <img src={garras2} alt="iconos de garras mas pequeños" />
+                </div>
+                <br />
+              </Modal>
+            </div>
           </div>
         </div>
       </div>
